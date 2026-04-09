@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bih7wlhwg83fg"]
+
+[ext_resource type="Script" uid="uid://dv00j5k0rhmpx" path="res://input/input.gd" id="1_ibw0e"]
+
+[node name="Input" type="LineEdit" unique_id=1883291564]
+size_flags_vertical = 10
+keep_editing_on_text_submit = true
+context_menu_enabled = false
+backspace_deletes_composite_character_enabled = true
+drag_and_drop_selection_enabled = false
+flat = true
+caret_blink = true
+caret_force_displayed = true
+script = ExtResource("1_ibw0e")

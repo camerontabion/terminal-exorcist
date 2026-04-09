@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cjldgr4njoijl"]
+
+[ext_resource type="Theme" uid="uid://b3nqfog3nno3y" path="res://theme/default_theme.tres" id="1_sxuvd"]
+[ext_resource type="Script" uid="uid://bpl8ks8r8kndu" path="res://terminal/terminal.gd" id="2_7d6gb"]
+[ext_resource type="PackedScene" uid="uid://vrq0jshuootp" path="res://terminal/history_item.tscn" id="3_0u45f"]
+[ext_resource type="PackedScene" uid="uid://bih7wlhwg83fg" path="res://input/input.tscn" id="3_b5qft"]
+[ext_resource type="Script" path="res://terminal/commands/cmd_info.gd" id="5_cmdinfo"]
+[ext_resource type="Script" path="res://terminal/commands/cmd_server.gd" id="6_cmdsrv"]
+[ext_resource type="Script" path="res://terminal/commands/cmd_filesystem.gd" id="7_cmdfs"]
+[ext_resource type="Script" path="res://terminal/commands/cmd_ghost.gd" id="8_cmdghost"]
+[ext_resource type="Script" path="res://terminal/commands/cmd_editor.gd" id="9_cmdeditor"]
+
+[node name="Terminal" type="VBoxContainer" unique_id=2143895382]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_sxuvd")
+script = ExtResource("2_7d6gb")
+history_item_scene = ExtResource("3_0u45f")
+
+[node name="HistoryContainer" type="ScrollContainer" parent="." unique_id=624986863]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="History" type="VBoxContainer" parent="HistoryContainer" unique_id=127391139]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+
+[node name="Input" parent="." unique_id=1883291564 instance=ExtResource("3_b5qft")]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Commands" type="Node" parent="."]
+
+[node name="CmdInfo" type="Node" parent="Commands"]
+script = ExtResource("5_cmdinfo")
+
+[node name="CmdServer" type="Node" parent="Commands"]
+script = ExtResource("6_cmdsrv")
+
+[node name="CmdFilesystem" type="Node" parent="Commands"]
+script = ExtResource("7_cmdfs")
+
+[node name="CmdGhost" type="Node" parent="Commands"]
+script = ExtResource("8_cmdghost")
+
+[node name="CmdEditor" type="Node" parent="Commands"]
+script = ExtResource("9_cmdeditor")
+
+[connection signal="text_submitted" from="Input" to="." method="_on_input_text_submitted"]

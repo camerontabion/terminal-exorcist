@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://b3nqfog3nno3y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bp0wp"]
+bg_color = Color(0, 0, 0, 0)
+
+[resource]
+default_font_size = 64
+LineEdit/constants/caret_width = 16
+LineEdit/styles/focus = SubResource("StyleBoxFlat_bp0wp")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_bp0wp")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_bp0wp")

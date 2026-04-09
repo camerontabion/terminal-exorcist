@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://vrq0jshuootp"]
+
+[ext_resource type="Theme" uid="uid://b3nqfog3nno3y" path="res://theme/default_theme.tres" id="1_ia28j"]
+
+[node name="HistoryItem" type="RichTextLabel" unique_id=707678653]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_ia28j")
+bbcode_enabled = true
+fit_content = true
