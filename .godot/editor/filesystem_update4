@@ -1,7 +1,0 @@
-res://autoload/game_state.gd
-res://input/input.gd
-res://terminal/terminal.gd
-res://terminal/commands/cmd_info.gd
-res://terminal/commands/cmd_editor.gd
-res://terminal/commands/cmd_filesystem.gd
-res://terminal/commands/cmd_server.gd
